@@ -6,10 +6,10 @@ FROM oraclelinux:latest
 
 MAINTAINER Bruno Borges <bruno.borges@oracle.com>
 
-ENV JAVA_PKG=server-jre-8u*-linux-x64.tar.gz \
-    JAVA_HOME=/usr/java/default \
-    PATH=$PATH:/usr/java/default/bin
+ENV JAVA_PKG=server-jre-8u*-linux-x64.tar.gz 
+ENV JAVA_HOME=/usr/java/default 
+ENV PATH=$PATH:/usr/java/default/bin
 
-ADD $JAVA_PKG /usr/java/
+ADD server-jre-8u*-linux-x64.tar.gz  /usr/java/
 
-RUN mv $(ls -1 -d /usr/java/*) $JAVA_HOME 
+RUN mv $(ls -1 -d /usr/java/*) /usr/java/default
