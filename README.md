@@ -8,4 +8,4 @@ This repository stores Dockerfiles and samples to build Docker images for Oracle
 
 # Custom Docker Images w/nagios
 This is custom install of Nagios on Centos 7
- - [Centos 7 Nagios](https://github.com/mysql/mysql-docker/)
+ - [Centos 7 Nagios](./CentosNagios)
