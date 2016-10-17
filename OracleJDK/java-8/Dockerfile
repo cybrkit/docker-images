@@ -16,4 +16,4 @@ RUN /tmp/dl_jre.sh
 
 RUN mkdir -p /usr/java/
 RUN mv /tmp/server-jre-8u101-linux-x64.tar.gz /usr/java/
-RUN mv $(ls -1 -d /usr/java/*) /usr/java/default
+RUN mv $(ls -1 -d /usr/java/*) /usr/java/default/
