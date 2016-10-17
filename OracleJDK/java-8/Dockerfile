@@ -10,7 +10,7 @@ ENV JAVA_PKG=server-jre-8u*-linux-x64.tar.gz
 ENV JAVA_HOME=/usr/java/default 
 ENV PATH=$PATH:/usr/java/default/bin
 
-ADD dl_jre.sh  /tmp
+ADD dl_jre.sh  /tmp/
 RUN chmod u+x /tmp/dl_jre.sh
 RUN /tmp/dl_jre.sh
 
