@@ -14,6 +14,7 @@ ADD dl_jre.sh /tmp/
 RUN chmod u+x /tmp/dl_jre.sh
 RUN /tmp/dl_jre.sh
 
-RUN mkdir -p /usr/java/
+RUN mkdir -p /usr/java/default/
 RUN mv /tmp/server-jre-8u101-linux-x64.tar.gz /usr/java/
 RUN mv $(ls -1 -d /usr/java/*) /usr/java/default/
+RUN rm /tmp/dl_jre.sh /usr/java/server-jre-8u101-linux-x64.tar.gz
