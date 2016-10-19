@@ -10,11 +10,9 @@ ENV JAVA_PKG=server-jre-8u*-linux-x64.tar.gz
 ENV JAVA_HOME=/usr/java/default 
 ENV PATH=$PATH:/usr/java/default/bin
 
-ADD dl_jre.sh /tmp/
-RUN chmod u+x /tmp/dl_jre.sh
-RUN /tmp/dl_jre.sh
+RUN curl -L "https://www.dropbox.com/s/ggfpy9hs3ybrkw1/server-jre-8u101-linux-x64.tar.gz?dl=1" -o "/tmp/server-jre-8u101-linux-x64.tar.gz"
 
 RUN mkdir -p /usr/java/default/
-RUN mv /tmp/server-jre-8u101-linux-x64.tar.gz /usr/java/
-RUN mv $(ls -1 -d /usr/java/*) /usr/java/default/
-RUN rm /tmp/dl_jre.sh /usr/java/server-jre-8u101-linux-x64.tar.gz
+RUN tar -xf /tmp/server-jre-8u101-linux-x64.tar.gz -C /usr/java/
+RUN mv $(ls -1 -d /usr/java/*) /usr/java/default
+RUN rm /tmp/server-jre-8u101-linux-x64.tar.gz
