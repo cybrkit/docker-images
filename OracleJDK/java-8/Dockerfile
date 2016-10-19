@@ -10,6 +10,7 @@ ENV JAVA_PKG=server-jre-8u*-linux-x64.tar.gz
 ENV JAVA_HOME=/usr/java/default 
 ENV PATH=$PATH:/usr/java/default/bin
 
+RUM yum -y install tar
 RUN curl -L "https://www.dropbox.com/s/ggfpy9hs3ybrkw1/server-jre-8u101-linux-x64.tar.gz?dl=1" -o "/tmp/server-jre-8u101-linux-x64.tar.gz"
 
 RUN mkdir -p /usr/java/default/
